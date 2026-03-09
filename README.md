@@ -233,9 +233,6 @@ Example pattern:
 
 Lead.objects.filter(organization=request.user.userprofile)
 
-
-
-
 This prevents users from accessing data outside their organization.
 
 ---
@@ -263,5 +260,39 @@ Email notifications are triggered when:
 This simulates real CRM workflow notifications.
 
 ---
+
+# Project Structure
+
+```text
+crm/
+│
+├── agents/              # Agent management
+│   ├── views.py
+│   ├── forms.py
+│   ├── mixins.py
+│   └── templates/
+│
+├── leads/               # Lead and category management
+│   ├── models.py
+│   ├── views.py
+│   ├── forms.py
+│   ├── urls.py
+│   └── tests/
+│
+├── templates/           # Shared templates
+│   ├── base.html
+│   ├── navbar.html
+│   └── registration/
+│
+├── static/              # Static files
+│   ├── css/
+│   └── js/
+│
+├── theme/               # Tailwind configuration
+│
+└── crm/                 # Core project configuration
+    └── settings.py
+```
+
 
 
