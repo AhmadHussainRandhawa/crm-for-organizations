@@ -299,7 +299,7 @@ crm/
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/crm-for-organization.git
+git clone git@github.com:AhmadHussainRandhawa/crm-for-organizations.git
 cd crm-for-organization
 ```
 
@@ -362,4 +362,43 @@ python manage.py test
 ```
 
 ---
+
+# Example Workflow
+
+1. Organizer signs up  
+2. Organizer creates agents  
+3. Agents receive invitation emails  
+4. Organizer creates leads  
+5. Leads appear as unassigned  
+6. Organizer assigns leads to agents  
+7. Agents manage assigned leads  
+8. Leads move through categories
+
+---
+
+# Future Improvements
+
+Possible improvements include:
+
+- REST API with **Django REST Framework**
+- Lead activity tracking (history/audit)
+- Lead notes and comments (rich text, attachments)
+- Email integration with external providers (SendGrid, Mailgun, SMTP)
+- Dashboard analytics and KPIs
+- WebSocket notifications for real-time updates
+- Docker-based deployment (dev & production)
+- Migrate to PostgreSQL for production
+
+---
+
+# License
+
+MIT License
+
+---
+
+# Let's Connect 🧟 
+[<img src="https://img.icons8.com/3d-fluency/30/secured-letter.png" alt="Email" style="vertical-align: middle;"/> official.ahmadrandhawa@gmail.com](mailto:official.ahmadrandhawa@gmail.com)   
+[<img src="https://icon.icepanel.io/Technology/svg/GitHub.svg" width="26" alt="GitHub"/> GitHub Profile](https://github.com/AhmadHussainRandhawa)   
+[<img src="https://icon.icepanel.io/Technology/svg/LinkedIn.svg" width="26" alt="LinkedIn"/>  Daily Updates](https://www.linkedin.com/in/ahmad-hussain-randhawa/) 
 
