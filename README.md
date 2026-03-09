@@ -33,3 +33,37 @@ It reflects the architecture commonly used in **real SaaS CRM systems**.
 ![User Management](docs/screenshots/users.png)
 
 ---
+
+# Core Features
+
+## Role-Based Access System
+
+The system defines two user roles.
+
+### Organizer
+
+Organizers act as administrators of the organization.
+
+Capabilities:
+
+- create agents
+- create and manage leads
+- assign leads to agents
+- manage lead categories
+- view all organization data
+
+---
+
+### Agent
+
+Agents are responsible for working on assigned leads.
+
+Capabilities:
+
+- view assigned leads
+- track leads through categories
+
+Agents cannot create agents or manage organization configuration.
+
+---
+
