@@ -67,3 +67,113 @@ Agents cannot create agents or manage organization configuration.
 
 ---
 
+# Multi-Tenant Architecture
+
+The system isolates data per organization.
+
+Every important object belongs to an organization:
+
+- Leads
+- Agents
+- Categories
+
+This ensures:
+
+- organizations cannot see each other's data
+- agents only access leads assigned to them
+- the platform can scale to support multiple organizations
+
+This pattern is widely used in **SaaS platforms**.
+
+---
+
+# Lead Management System
+
+Leads represent potential customers.
+
+Each lead contains:
+
+- first name
+- last name
+- age
+- assigned agent
+- category
+- organization
+
+Leads can be created, edited, deleted, and assigned to agents.
+
+---
+
+# Lead Assignment Workflow
+
+Leads are distributed across agents through an assignment workflow.
+
+Typical flow:
+
+1. Organizer creates a lead
+2. Lead appears as **unassigned**
+3. Organizer assigns the lead to an agent
+4. The agent can now work on that lead
+
+This models how real sales teams distribute incoming prospects.
+
+---
+
+# Lead Categorization
+
+Leads can be organized into pipeline stages such as:
+
+- New
+- Contacted
+- Converted
+- Unconverted
+
+Categories allow teams to track **sales progress and lead status**.
+
+---
+
+# Agent Management
+
+Organizers can manage their sales team directly from the system.
+
+They can:
+
+- create agents
+- update agent information
+- remove agents
+- monitor agent assignments
+
+When an agent is created:
+
+- a user account is generated
+- the agent is linked to the organization
+- an invitation email is sent
+
+---
+
+# Authentication System
+
+The project uses Django authentication with a **custom user model**.
+
+Additional attributes define user roles:
+
+- `is_organizer`
+- `is_agent`
+
+Each user automatically receives a **UserProfile** representing their organization.  
+This is handled using a **Django signal**.
+
+---
+
+# Access Control
+
+Access control is implemented through:
+
+- login protection
+- role-based permission checks
+- organization-scoped query filtering
+
+This ensures users cannot access data outside their organization.
+
+---
+
