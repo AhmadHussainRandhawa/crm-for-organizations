@@ -294,5 +294,72 @@ crm/
     └── settings.py
 ```
 
+# Installation
 
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/crm-for-organization.git
+cd crm-for-organization
+```
+
+Create a virtual environment and activate it:
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+Install Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Apply database migrations:
+
+```bash
+python manage.py migrate
+```
+
+Create a Django superuser:
+
+```bash
+python manage.py createsuperuser
+```
+
+Run the development server:
+
+```bash
+python manage.py runserver
+```
+
+---
+
+# Tailwind Setup
+
+Install Node dependencies for the Tailwind theme:
+
+```bash
+cd theme/static_src
+npm install
+```
+
+Start the Tailwind watcher (development):
+
+```bash
+python manage.py tailwind start
+```
+
+---
+
+# Running Tests
+
+Run the test suite:
+
+```bash
+python manage.py test
+```
+
+---
 
