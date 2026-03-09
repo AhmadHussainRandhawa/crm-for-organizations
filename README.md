@@ -177,3 +177,26 @@ This ensures users cannot access data outside their organization.
 
 ---
 
+# Tech Stack
+
+Backend
+
+- Python
+- Django
+
+Frontend
+
+- HTML Templates
+- Tailwind CSS
+
+Database
+
+- SQLite (development)
+
+Development Tools
+
+- Django Tailwind
+- Django Browser Reload
+
+---
+
