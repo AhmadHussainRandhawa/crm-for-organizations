@@ -200,3 +200,68 @@ Development Tools
 
 ---
 
+# Engineering Highlights
+
+This project demonstrates several important backend engineering concepts.
+
+### Custom User Model
+
+The system extends Django's `AbstractUser` to support role-based behavior.
+
+---
+
+### Class-Based Views
+
+The application uses Django generic class-based views such as:
+
+- ListView
+- DetailView
+- CreateView
+- UpdateView
+- DeleteView
+- FormView
+
+This promotes clean architecture and reusable code.
+
+---
+
+### Organization-Level Query Filtering
+
+Data access is restricted using filtered querysets.
+
+Example pattern:
+
+Lead.objects.filter(organization=request.user.userprofile)
+
+
+
+
+This prevents users from accessing data outside their organization.
+
+---
+
+### Dynamic Forms
+
+Forms dynamically filter available agents based on the logged-in user's organization.  
+This ensures correct assignment workflows.
+
+---
+
+### Signals
+
+A Django signal automatically creates a `UserProfile` whenever a new user is created.
+
+---
+
+### Email Notifications
+
+Email notifications are triggered when:
+
+- a new agent is created
+- a lead is created
+
+This simulates real CRM workflow notifications.
+
+---
+
+
