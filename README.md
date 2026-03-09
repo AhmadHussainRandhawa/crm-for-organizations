@@ -7,3 +7,29 @@ This project demonstrates how to design a **role-based, multi-tenant business ap
 It reflects the architecture commonly used in **real SaaS CRM systems**.
 
 ---
+
+# Project Preview
+
+## Dashboard
+
+![CRM Dashboard](docs/screenshots/dashboard.png)
+
+---
+
+## Lead Management
+
+![Lead Management](docs/screenshots/leads.png)
+
+---
+
+## Agent Management
+
+![Agent Management](docs/screenshots/agents.png)
+
+---
+
+## User Management
+
+![User Management](docs/screenshots/users.png)
+
+---
