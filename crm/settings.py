@@ -40,17 +40,7 @@ INSTALLED_APPS = [
 TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = ['127.0.0.1']
 
-# Auto-detection first
-NPM_BIN_PATH = os.path.join(BASE_DIR, 'node_modules/.bin/npm')
-
-# Fallback to global npm (development only)
-if not os.path.exists(NPM_BIN_PATH):
-    NPM_BIN_PATH = "/home/ahmad-hussain/.nvm/versions/node/v18.20.7/bin/npm"  # Check your path by running `which npm` or `where npm`
-    if DEBUG:
-        print(f"WARNING: Using global npm at {NPM_BIN_PATH}")
-    else:
-        raise ImproperlyConfigured("Production requires local npm. Run 'npm install'.")
-
+NPM_BIN_PATH = "/usr/bin/npm"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
